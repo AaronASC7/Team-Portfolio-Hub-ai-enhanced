@@ -1,0 +1,136 @@
+/* COLOR SCHEME
+#CECFD3 (Pewter/Gray)
+#071330 (Dark Blue)
+#392C3D (Marsala/Dark Purple)
+#394B6F (Cornflower/Lightblue)
+*/
+
+/*      ---BACKGROUND---       */
+body {
+    background-image: linear-gradient(#394B6F, rgb(67, 70, 85));
+    color: white; /* TEMP. COLOR */
+    overflow: hidden;
+}
+
+/*      ---NAVIGATIONBAR | INTRODUCTION---     */
+.Navigation_Bar {
+    display:flex;
+    background-color: rgb(18, 21, 29);
+    color:white;
+    align-items: center;
+    justify-content: space-around;
+    padding:15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 50px;
+}
+
+.Navigation_Bar:hover {
+    background:gray;
+    opacity:20%;
+}
+
+.begin_intro {      /*Small info header */
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+/*      ---IMAGES---      */
+/* width:400px height:270px */
+#ASC_Logo {
+    width: 200px;
+    filter: contrast(200%)
+}
+
+#trung_image {
+    width: 600px;
+    border-radius: 20px;
+    border: 5px solid black;
+    margin:110px;
+    box-shadow: 10px 10px 10px rgb(32, 44, 61);
+    
+}
+
+#kamau_image {
+    width: 600px;
+    height:420px;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin:110px;
+    box-shadow: 10px 10px 10px rgb(32, 44, 61);
+}
+
+#aaron_image {
+    
+    width:450px;
+    margin:110px;
+    border:5px solid black;
+    border-radius:15px;
+    box-shadow: 10px 10px 10px rgb(32, 44, 61);
+}
+
+
+
+/*      ---STUDENT BACKGROUND INFORMATION---      */
+.ASC_Student { /* Text/Font of AllStarCode Student, it is under images */
+    font-size: 16px;
+    text-align:center;
+}
+
+.div_alignment {    /* UNSURE IDK */
+    display:flex;
+    justify-content:space-around;
+    align-items:flex-start;
+    padding-top:80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 32px;
+    
+       
+}
+
+.info_alignment { /* Info position */
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    
+
+}
+
+.contact_info { /* Contact Information */
+    font-style: italic;
+    font-size: 20px;
+}
+
+.begin_intro {
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: top-down 1s forwards;
+    animation-fill-mode: forwards;
+}
+
+
+.info_alignment {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slide-in 1s forwards;
+    animation-fill-mode: forwards;
+    position: relative;
+
+}
+
+@keyframes top-down {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
